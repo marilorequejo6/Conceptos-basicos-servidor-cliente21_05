@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Bienvenida a la app
+    <main></main>
+    <button id="salir">Salir</button>
+    <script>
+      
+        salir.addEventListener("click",()=>{
+            console.log("salir")
+            localStorage.removeItem("usuario");
+            location.replace("/");
+        })
+    </script>
+</body>
+</html>
