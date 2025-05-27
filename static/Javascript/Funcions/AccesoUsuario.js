@@ -1,20 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <form id="formulario">
-        <input type="text" name="name" placeholder="Nombre">
-        <input type="text" name="email" placeholder="Email">
-        <button id="botonEnviar">Enviar</button>
-        <button type="reset">Borrar datos</button>
-    </form>
-    <div id="mensaje"></div>
-    <script type="module" src="../Javascript/index.js">
-        /* botonEnviar.addEventListener("click",async (e)=>{
+export async function AccesoUsuario() {
+  
+    botonEnviar.addEventListener("click",async (e)=>{
             e.preventDefault();
             //const {nome, email} = formulario;// desesctructura o obxeto de entrada
             //console.log(nome.value, email.value);// imprime os valores do formulario
@@ -35,16 +21,15 @@
 
             let respuesta = await respuestaServer.json();
 
-            console.log(respuesta.respuesta);
+            console.log("respuesta ????",respuesta.tokenUsuario);
 
-            if(respuesta.respuesta === "acesso autorizado"){
-                console.log("Iremos a la app")
+            if(respuesta.respuesta === "acceso autorizado"){
+                console.log("vamos a la app")
+                localStorage.setItem("token",respuesta.tokenUsuario)
                 location.replace("/app");
             }else{
                 console.log(respuesta.respuesta);
                 mensaje.innerHTML = respuesta.respuesta;
             }
-        }) */
-    </script>
-</body>
-</html>
+        })
+} 
