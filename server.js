@@ -36,6 +36,17 @@ app.get("/pagina-app", isUser, (req, res) => {
     res.send(paginas.app);
 })
 
+app.get("/tareas", isUser, (req, res) => {
+    const tareas = {
+        tareas1: "Tarea 1",
+        tareas2: "Tarea 2",
+        tareas3: "Tarea 3",
+        tareas4: "Tarea 4",
+        tareas5: "Tarea 5",
+        tareas6: "Tarea 6"
+    }
+    res.send(tareas);
+})
 
 //START SERVER
 app.listen(3000, function () {

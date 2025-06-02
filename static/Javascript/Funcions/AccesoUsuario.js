@@ -1,3 +1,5 @@
+import { endpoints } from "../Datos/datos.js";
+
 export async function AccesoUsuario() {
   
     botonEnviar.addEventListener("click",async (e)=>{
@@ -17,7 +19,7 @@ export async function AccesoUsuario() {
                 },
                 body: JSON.stringify(entradas)
             }
-            let respuestaServer = await fetch("/acceso", objetoEnvio) 
+            let respuestaServer = await fetch(endpoints.acceso, objetoEnvio) 
 
             let respuesta = await respuestaServer.json();
 
