@@ -1,0 +1,15 @@
+.boton-eliminar{
+    background-color: #ff4d4d;
+    width: 10px;
+    height: 10px;
+    border: 1px solid black;
+    padding: 5px;
+    margin-left: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+    &:hover{
+        transform: scale(1.2);
+        filter: brightness(1.2);
+    }
+}
